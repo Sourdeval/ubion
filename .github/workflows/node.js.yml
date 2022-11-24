@@ -27,4 +27,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
+    - run: git config --global user.name "Sourdeval"
+    - run: git config --global user.email "sourdeval@laposte.net"
     - run: npm run-script publish-pages
