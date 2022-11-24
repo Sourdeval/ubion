@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#feccb1+0,f17432+50,ea5507+51,fb955e+100;Red+Gloss+%232 */
+body{
+    /*background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+    url("assets/wall.png");*/
+    background: linear-gradient(135deg, #0f00e2 0%,#2183ed 62%,#23e5ff 100%);
+}
+
+h1, h2 {
+    font-family: 'Kino MT';
+    color: whitesmoke;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+h3, h4 {
+    font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+    color: whitesmoke;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+h5, h6 {
+    color: whitesmoke;
+}
+
+h1 {
+    font-size: 350%;
+}
+
+h2 {
+    font-size: 250%;
+}
+
+h3 {
+    font-size: 180%;
+}
+
+h4 {
+    font-size: 120%;
+}
+
+h5 {
+    font-size: 100%;
+}
+
+h6 {
+    font-size: 60%;
+}
