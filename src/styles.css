@@ -2,25 +2,45 @@
 body{
     /*background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
     url("assets/wall.png");*/
-    background: linear-gradient(135deg, #0f00e2 0%,#2183ed 62%,#23e5ff 100%);
+    background: linear-gradient(135deg, #04003e 0%,#174e89 62%,#207dff 80%, #20a9ff 100%);
+}
+
+/* All texts */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* Titles */
+h1, h2, h3 {
+    font-family: 'Kino MT';
+    color: whitesmoke;
+    margin: 12px;
 }
 
 h1, h2 {
-    font-family: 'Kino MT';
-    color: whitesmoke;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
 
-h3, h4 {
-    font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+h3 {
+    margin-left: 42px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+/* Key words */
+h4 {
+    font-family: 'Times New Roman', Times, serif;
     color: whitesmoke;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+/* Texts */
 h5, h6 {
+    font-family: 'Times New Roman', Times, serif;
     color: whitesmoke;
 }
 
+/* Sizes */
 h1 {
     font-size: 350%;
 }
@@ -43,4 +63,12 @@ h5 {
 
 h6 {
     font-size: 60%;
+}
+
+/* Tables */
+table{
+    width: 90%;
+    margin-left: 10%;
+    margin-bottom: 2%;
+    margin-top: 2%;
 }
