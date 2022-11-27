@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Titles */
 h1, h2, h3 {
-    font-family: 'Kino MT';
+    font-family: 'Kino MT', 'Times New roman', Times, serif;
     color: whitesmoke;
     margin: 12px;
 }
@@ -22,7 +22,6 @@ h1, h2 {
 }
 
 h3 {
-    margin-left: 42px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
@@ -67,8 +66,18 @@ h6 {
 
 /* Tables */
 table{
-    width: 90%;
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-bottom: 2%;
     margin-top: 2%;
+}
+
+/* Class */
+/* To represents in the same line */
+.inline {
+    display: inline-block;
+}
+
+.subtitle {
+    margin-left: 42px;
 }

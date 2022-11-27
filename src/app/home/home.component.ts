@@ -8,6 +8,7 @@ import { Data } from 'src/app/core';
 })
 export class HomeComponent {
   data : Data;
+  srcmap = "assets/map.png";
   constructor(){
     this.data = {
       senators: [
