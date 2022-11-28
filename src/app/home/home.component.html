@@ -1,9 +1,12 @@
 <h1 align="center">Xorghluflux Saison 2</h1>
-<h2>Chapitre 1</h2>
-<h5>Nous sommes tous très contents d'être ici. Il est important de manger des fruits, des légumes et principalement du pain pour survivre. Les canards domineront le monde d'ici 15 à 20 jours. Je n'ai aucune opinion politique à transmettre dans ce site internet.</h5>
-<h3 class="subtitle">Un nouveau départ</h3>
-<h5>Il n'est pas évident d'être sois même, surtout dans des temps de crise. Et nous arrivons dans un temps de crise. Le pays au 9 sénateurs va bientôt entrer dans la tourmente.</h5>
-<h5>Ceci pourrait être un texte classique non ?</h5>
+<h3 class="subtitle">Sénateurs</h3>
+<mat-card>
+    <span class="inline senator" *ngFor='let s of data.senators; let i=index'>
+        <img style="align-self: center;" src="assets/{{s.name}}.png" alt="{{s.name}}">
+        <h4 align="center">{{s.fullname}}</h4>
+    </span>
+</mat-card>
+
 <h3 class="subtitle">Une histoire de poil</h3>
 <h5>Il est impensable qu'une Xorghluflux soit dénudé. Leur poil, bien que léger, est un composant essentiel de leur bien être. Un grand Xorghluflux a dit un jour : "zf zefg oobdf jhsd", ce qui peut abrutement se traduire par : "Cailloux casser toi si toi continuer", même si cela n'a rien à voir nous sommes heureux d'avoir pu dialoguer.</h5>
 <h3 class="subtitle">Voler</h3>

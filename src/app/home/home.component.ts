@@ -13,10 +13,14 @@ export class HomeComponent {
     this.data = {
       senators: [
         {
-          name: "azeirou",
+          name: "zugle",
           fullname: "couzei",
-          description: "couzei"
-        
+          description: "Gentil"
+        },
+        {
+          name: "flo",
+          fullname: "Doss Kaar Le Grand",
+          description: "Méchant"
         }
       ],
       species: {
