@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Data } from 'src/app/core';
+import { Data, Relation } from 'src/app/core';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +8,7 @@ import { Data } from 'src/app/core';
 })
 export class HomeComponent {
   data : Data;
+  relationType = Relation;
   srcmap = "assets/map.png";
   constructor(){
     this.data = {
@@ -33,7 +34,44 @@ export class HomeComponent {
         psychisme: 9,
         xenophilie: 12,
         mecanique: 7
-      }
+      },
+      pnj: [
+        {
+          name: "one",
+          fullname: "OneNation",
+          relation: Relation.good,
+          characters:[
+            {
+              name: "Krikro",
+              relation: Relation.coldwar
+            }
+          ]
+        },
+        {
+          name: "two",
+          fullname: "EZFJOZEFJO",
+          relation: Relation.bad,
+          characters:[]
+        },
+        {
+          name: "twzezefo",
+          fullname: "fvoij oizejf",
+          relation: Relation.trade,
+          characters:[]
+        },
+        {
+          name: "poreg",
+          fullname: "Poro",
+          relation: Relation.ally,
+          characters:[]
+        },
+        {
+          name: "nnn",
+          fullname: "Naninana",
+          relation: Relation.war,
+          characters:[]
+        },
+      ]
     }
   }
 }

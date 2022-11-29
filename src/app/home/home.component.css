@@ -3,6 +3,7 @@ mat-card{
     display: flex;
     flex-direction: row;
     padding: 6px;
+    background: linear-gradient(#ff9d00 0%,#eeff00 100%);
 }
 
 .senator {
@@ -10,4 +11,17 @@ mat-card{
     min-width: 100px;
     display: flex;
     flex-direction: column;
+}
+
+.icon-column {
+    width: 10%;
+    min-width: 20px;
+}
+
+.name-column {
+    width: 90%;
+}
+
+.mat-icon {
+    vertical-align: middle;
 }

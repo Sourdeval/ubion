@@ -4,7 +4,7 @@ html, body { height: 100%; }
 body{
     /*background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
     url("assets/wall.png");*/
-    background: linear-gradient(135deg, #04003e 0%,#174e89 62%,#207dff 80%, #20a9ff 100%);
+    background: linear-gradient(90deg, #04003e 0%,#174e89 62%,#207dff 80%, #20a9ff 100%);
 }
 
 /* All texts */

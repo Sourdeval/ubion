@@ -1,6 +1,7 @@
 export interface Data{
     senators:Senator[];
     species:SpeciesStat;
+    pnj:Pnj[];
 }
 
 export interface Senator{
@@ -19,4 +20,20 @@ export interface SpeciesStat{
     psychisme: number;
     xenophilie: number;
     charisme: number;
+}
+
+export interface Pnj{
+    name: string;
+    fullname: string;
+    characters: Character[];
+    relation: Relation;
+}
+
+export enum Relation{
+    bad, good, ally, war, trade, coldwar, love
+}
+
+export interface Character{
+    name: string;
+    relation: Relation
 }
