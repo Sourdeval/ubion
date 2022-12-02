@@ -3,6 +3,11 @@ export interface Data{
     species:SpeciesStat;
     pnj:Pnj[];
     lastReport: string;
+    population: number;
+    ressources: number;
+    army: number;
+    food: Food;
+    popularity: Popularity;
 }
 
 export interface Senator{
@@ -37,4 +42,11 @@ export enum Relation{
 export interface Character{
     name: string;
     relation: Relation
+}
+
+export enum Food {
+    abondance, suffisante, maigre, famine,
+}
+export enum Popularity {
+    maximum, bonne, moyenne, faible, contestation, revolte
 }

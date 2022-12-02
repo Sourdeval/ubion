@@ -7,8 +7,31 @@
     </span>
 </mat-card>
 
-<h3 class="subtitle">Une histoire de poil</h3>
-<h5>Il est impensable qu'une Xorghluflux soit dénudé. Leur poil, bien que léger, est un composant essentiel de leur bien être. Un grand Xorghluflux a dit un jour : "zf zefg oobdf jhsd", ce qui peut abrutement se traduire par : "Cailloux casser toi si toi continuer", même si cela n'a rien à voir nous sommes heureux d'avoir pu dialoguer.</h5>
+<h3 class="subtitle">Etat actuel du pays</h3>
+<mat-card style="display: block;">
+    <h4 class="inline" style="margin-left: 60px;">Population :<b style="margin-left: 30px;">{{data.population}}</b></h4>
+    <h4 class="inline" style="margin-left: 60px;">Ressources :<b style="margin-left: 30px;">{{data.ressources}} </b><b style="color:rgb(255, 200, 0);">PR</b></h4>
+    <h4 class="inline" style="margin-left: 60px;">Puissance Militaire :<b style="margin-left: 30px;">{{data.army}}</b></h4>
+    <h4 class="inline" style="margin-left: 60px;">Nourriture :
+        <span [ngSwitch]="data.food">
+            <b *ngSwitchCase="foodType.abondance" style="margin-left: 30px; color: rgb(0, 255, 0)">Abondance</b>
+            <b *ngSwitchCase="foodType.suffisante" style="margin-left: 30px; color: rgb(0, 255, 0)">Suffisante</b>
+            <b *ngSwitchCase="foodType.maigre" style="margin-left: 30px; color: rgb(255, 145, 0)">Maigre</b>
+            <b *ngSwitchCase="foodType.famine" style="margin-left: 30px; color: rgb(255, 0, 0)">Famine</b>
+        </span>
+    </h4>
+    <h4 class="inline" style="margin-left: 60px;">Popularité :
+        <span [ngSwitch]="data.popularity">
+            <b *ngSwitchCase="popularityType.maximum" style="margin-left: 30px; color: rgb(0, 255, 0)">Maximum</b>
+            <b *ngSwitchCase="popularityType.bonne" style="margin-left: 30px; color: rgb(0, 255, 0)">Bonne</b>
+            <b *ngSwitchCase="popularityType.moyenne" style="margin-left: 30px; color: rgb(0, 255, 0)">Moyenne</b>
+            <b *ngSwitchCase="popularityType.faible" style="margin-left: 30px; color: rgb(255, 145, 0)">Faible</b>
+            <b *ngSwitchCase="popularityType.contestation" style="margin-left: 30px; color: rgb(255, 0, 0)">Contestation</b>
+            <b *ngSwitchCase="popularityType.revolte" style="margin-left: 30px; color: rgb(255, 0, 0)">Révolte</b>
+        </span>
+    </h4>
+</mat-card>
+
 <div style="width: 100%;">
     <table class="inline">
         <tr>
