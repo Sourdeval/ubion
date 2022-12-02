@@ -71,7 +71,8 @@ export class HomeComponent {
           relation: Relation.war,
           characters:[]
         },
-      ]
+      ],
+      lastReport: "Tout va bien. Un jour ou l'autre, il faut savoir prendre son envol. Et si le pays des 9 sénateurs a bien compris quelque chose, c'est qu'il ne devait pas être le dernier à s'envoler. On pense parfois qu'il est nécessaire d'avoir des ailes, mais c'est bien faux, il faut juste une falaise. Ou un endroit bien haut."
     }
   }
 }

@@ -68,16 +68,17 @@ h6 {
 
 /* Tables */
 table{
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
     margin-bottom: 2%;
-    margin-top: 2%;
+    margin-top: 0%;
 }
 
 /* Class */
 /* To represents in the same line */
 .inline {
     display: inline-block;
+    vertical-align: top;
 }
 
 .subtitle {

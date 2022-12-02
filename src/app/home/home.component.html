@@ -1,16 +1,14 @@
 <h1 align="center">Xorghluflux Saison 2</h1>
-<h3 class="subtitle">Sénateurs</h3>
+<h3 class="subtitle">Le Sénat</h3>
 <mat-card>
     <span class="inline senator" *ngFor='let s of data.senators; let i=index'>
-        <img style="align-self: center;" src="assets/{{s.name}}.png" alt="{{s.name}}">
+        <img style="align-self: center; width: 90%;" src="assets/{{s.name}}_140.png" alt="image de {{s.name}}">
         <h4 align="center">{{s.fullname}}</h4>
     </span>
 </mat-card>
 
 <h3 class="subtitle">Une histoire de poil</h3>
 <h5>Il est impensable qu'une Xorghluflux soit dénudé. Leur poil, bien que léger, est un composant essentiel de leur bien être. Un grand Xorghluflux a dit un jour : "zf zefg oobdf jhsd", ce qui peut abrutement se traduire par : "Cailloux casser toi si toi continuer", même si cela n'a rien à voir nous sommes heureux d'avoir pu dialoguer.</h5>
-<h3 class="subtitle">Voler</h3>
-<h5>Un jour ou l'autre, il faut savoir prendre son envol. Et si le pays des 9 sénateurs a bien compris quelque chose, c'est qu'il ne devait pas être le dernier à s'envoler. On pense parfois qu'il est nécessaire d'avoir des ailes, mais c'est bien faux, il faut juste une falaise. Ou un endroit bien haut.</h5>
 <div style="width: 100%;">
     <table class="inline">
         <tr>
@@ -57,7 +55,7 @@
         <h3 align="center">Carte</h3>
         <img  [src]="srcmap" (mouseover)='srcmap="assets/map_annote.png"' (mouseout)='srcmap="assets/map.png"' alt="Carte du monde">
     </div>
-    <div class="inline" style="margin: 5%;">
+    <div class="inline" style="margin-left: 3%; margin-right: 3%;">
         <div>
             <th colSpan="2"><h3 align="center">Autres Nations</h3></th>
         </div>
@@ -65,7 +63,8 @@
             <td class="name-column"><h4>{{n.fullname}}</h4></td>
             <td class="icon-column">
                 <div [ngSwitch]="n.relation">
-                    <mat-icon *ngSwitchCase="relationType.bad" style="color: #ddff00;">sentiment_dissatisfied</mat-icon>
+                    <mat-icon *ngSwitchCase="relationType.neutral" style="color: #ddff00;">sentiment_dissatisfied</mat-icon>
+                    <mat-icon *ngSwitchCase="relationType.bad" style="color: #ff0000;">sentiment_dissatisfied</mat-icon>
                     <mat-icon *ngSwitchCase='relationType.good' style="color: #00FF00;">tag_faces</mat-icon>
                     <mat-icon *ngSwitchCase='relationType.war' style="color: #ff0000;">offline_bolt</mat-icon>
                     <mat-icon *ngSwitchCase='relationType.ally' style="color: #00FF00;">security</mat-icon>
@@ -78,7 +77,8 @@
                 <h4 style="color: black; text-shadow: none; margin-left:20px;">- {{pnj.name}}</h4>
                 <td class="icon-column">
                     <div [ngSwitch]="pnj.relation">
-                        <mat-icon *ngSwitchCase="relationType.bad" style="color: #ddff00;">sentiment_dissatisfied</mat-icon>
+                        <mat-icon *ngSwitchCase="relationType.neutral" style="color: #ddff00;">sentiment_dissatisfied</mat-icon>
+                        <mat-icon *ngSwitchCase="relationType.bad" style="color: #ff0000;">sentiment_dissatisfied</mat-icon>                        <mat-icon *ngSwitchCase='relationType.good' style="color: #00FF00;">tag_faces</mat-icon>
                         <mat-icon *ngSwitchCase='relationType.good' style="color: #00FF00;">tag_faces</mat-icon>
                         <mat-icon *ngSwitchCase='relationType.war' style="color: #ff0000;">offline_bolt</mat-icon>
                         <mat-icon *ngSwitchCase='relationType.ally' style="color: #00FF00;">security</mat-icon>
@@ -90,10 +90,8 @@
             </tr>
         </div>
     </div>
+    <div align="center" class="inline" style="width: 20%; min-width: 200px;" *ngIf="data.lastReport">
+        <h3>Dernier rapport annuel</h3>
+        <h5>{{data.lastReport}}</h5>
+    </div>
 </div>
-<img src="assets/zugle2_140.png" alt="Zugle">
-<img src="assets/flo3_140.png" alt="Zugle">
-<img src="assets/zugle2_140.png" alt="Zugle">
-<img src="assets/flo3_140.png" alt="Zugle">
-<img src="assets/zugle2_140.png" alt="Zugle">
-<img src="assets/flo3_140.png" alt="Zugle">

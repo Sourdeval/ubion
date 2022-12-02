@@ -2,6 +2,7 @@ export interface Data{
     senators:Senator[];
     species:SpeciesStat;
     pnj:Pnj[];
+    lastReport: string;
 }
 
 export interface Senator{
@@ -30,7 +31,7 @@ export interface Pnj{
 }
 
 export enum Relation{
-    bad, good, ally, war, trade, coldwar, love
+    bad, good, ally, war, trade, coldwar, love, neutral
 }
 
 export interface Character{
