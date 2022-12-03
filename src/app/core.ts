@@ -8,6 +8,7 @@ export interface Data{
     army: number;
     food: Food;
     popularity: Popularity;
+    cities: City[];
 }
 
 export interface Senator{
@@ -49,4 +50,16 @@ export enum Food {
 }
 export enum Popularity {
     maximum, bonne, moyenne, faible, contestation, revolte
+}
+
+export interface City{
+    name: string;
+    population: number;
+    richness: Richness;
+    defence: number;
+    description: string;
+}
+
+export enum Richness {
+    riche, aise, moyen, faible, pauvre
 }

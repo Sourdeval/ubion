@@ -84,3 +84,10 @@ table{
 .subtitle {
     margin-left: 42px;
 }
+
+section {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}

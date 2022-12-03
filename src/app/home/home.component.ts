@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Data, Food, Popularity, Relation } from 'src/app/core';
+import { Data, Food, Popularity, Relation, Richness } from 'src/app/core';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +11,7 @@ export class HomeComponent {
   relationType = Relation;
   foodType = Food;
   popularityType = Popularity;
+  richnessType = Richness;
   srcmap = "assets/map.png";
   constructor(){
     this.data = {
@@ -79,7 +80,23 @@ export class HomeComponent {
       ressources: 21,
       army: 2,
       food: Food.famine,
-      popularity: Popularity.revolte
+      popularity: Popularity.revolte,
+      cities: [
+        {
+          name: "Capital City",
+          population: 5,
+          richness: Richness.riche,
+          defence: 1,
+          description: "zfzef zefk zef zeokpfpozekfkopzeopkf opzefkpozefko zefkpzeofk kpozfzoef"
+        },
+        {
+          name: "Capisdfcldj",
+          population: 54,
+          richness: Richness.moyen,
+          defence: 3,
+          description: "zfzef zefk zef zeopkf opzefkpozefko zefkpzeofk kpozfzoef"
+        }
+      ]
     }
   }
 }

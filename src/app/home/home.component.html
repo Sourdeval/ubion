@@ -1,10 +1,12 @@
 <h1 align="center">Xorghluflux Saison 2</h1>
-<h3 class="subtitle">Le Sénat</h3>
+<h3 class="subtitle">Sénat</h3>
 <mat-card>
-    <span class="inline senator" *ngFor='let s of data.senators; let i=index'>
-        <img style="align-self: center; width: 90%;" src="assets/{{s.name}}_140.png" alt="image de {{s.name}}">
-        <h4 align="center">{{s.fullname}}</h4>
-    </span>
+    <section>
+        <span class="inline senator" *ngFor='let s of data.senators; let i=index'>
+            <img style="align-self: center; width: 90%;" src="assets/{{s.name}}_140.png" alt="image de {{s.name}}">
+            <h4 align="center">{{s.fullname}}</h4>
+        </span>
+    </section>
 </mat-card>
 
 <h3 class="subtitle">Etat actuel du pays</h3>
@@ -31,8 +33,32 @@
         </span>
     </h4>
 </mat-card>
+<br>
+<section>
+    <mat-card *ngFor="let city of data.cities" style="width: 45%; min-width: 400px;">
+        <mat-card-header>
+            <mat-card-title><h3>{{city.name}}</h3></mat-card-title>
+            <mat-card-subtitle>
+                <h4 align="center">Population : {{city.population}}</h4>
+                <h4 align="center" [ngSwitch]="city.richness">Richesse :
+                    <span *ngSwitchCase="richnessType.riche">Riche</span>
+                    <span *ngSwitchCase="richnessType.aise">Aisée</span>
+                    <span *ngSwitchCase="richnessType.moyen">Moyen</span>
+                    <span *ngSwitchCase="richnessType.faible">Faible</span>
+                    <span *ngSwitchCase="richnessType.pauvre">Pauvre</span>
+                </h4>
+                <h4 align="center">Défense : {{city.defence}}</h4>
+            </mat-card-subtitle>
+        </mat-card-header>
+            <h4>{{city.description}}</h4>
+    </mat-card>
+</section>
 
 <div style="width: 100%;">
+    <h3>Religion</h3>
+</div>
+
+<section>
     <table class="inline">
         <tr>
             <th colSpan="2"><h3 align="center">Statistiques</h3></th>
@@ -117,4 +143,4 @@
         <h3>Dernier rapport annuel</h3>
         <h5>{{data.lastReport}}</h5>
     </div>
-</div>
+</section>
