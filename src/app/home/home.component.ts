@@ -40,8 +40,7 @@ export class HomeComponent {
       },
       pnj: [
         {
-          name: "one",
-          fullname: "OneNation",
+          name: "OneNation",
           relation: Relation.good,
           characters:[
             {
@@ -51,26 +50,22 @@ export class HomeComponent {
           ]
         },
         {
-          name: "two",
-          fullname: "EZFJOZEFJO",
+          name: "EZFJOZEFJO",
           relation: Relation.bad,
           characters:[]
         },
         {
-          name: "twzezefo",
-          fullname: "fvoij oizejf",
+          name: "voij oizejf",
           relation: Relation.trade,
           characters:[]
         },
         {
-          name: "poreg",
-          fullname: "Poro",
+          name: "Poro",
           relation: Relation.ally,
           characters:[]
         },
         {
-          name: "nnn",
-          fullname: "Naninana",
+          name: "Naninana",
           relation: Relation.war,
           characters:[]
         },

@@ -31,7 +31,6 @@ export interface SpeciesStat{
 
 export interface Pnj{
     name: string;
-    fullname: string;
     characters: Character[];
     relation: Relation;
 }

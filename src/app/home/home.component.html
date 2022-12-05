@@ -109,7 +109,7 @@
             <th colSpan="2"><h3 align="center">Autres Nations</h3></th>
         </div>
         <div style="border-bottom: 1px black solid;" *ngFor="let n of data.pnj">
-            <td class="name-column"><h4>{{n.fullname}}</h4></td>
+            <td class="name-column"><h4>{{n.name}}</h4></td>
             <td class="icon-column">
                 <div [ngSwitch]="n.relation">
                     <mat-icon *ngSwitchCase="relationType.neutral" style="color: #ddff00;">sentiment_dissatisfied</mat-icon>
@@ -127,7 +127,7 @@
                 <td class="icon-column">
                     <div [ngSwitch]="pnj.relation">
                         <mat-icon *ngSwitchCase="relationType.neutral" style="color: #ddff00;">sentiment_dissatisfied</mat-icon>
-                        <mat-icon *ngSwitchCase="relationType.bad" style="color: #ff0000;">sentiment_dissatisfied</mat-icon>                        <mat-icon *ngSwitchCase='relationType.good' style="color: #00FF00;">tag_faces</mat-icon>
+                        <mat-icon *ngSwitchCase="relationType.bad" style="color: #ff0000;">sentiment_dissatisfied</mat-icon>
                         <mat-icon *ngSwitchCase='relationType.good' style="color: #00FF00;">tag_faces</mat-icon>
                         <mat-icon *ngSwitchCase='relationType.war' style="color: #ff0000;">offline_bolt</mat-icon>
                         <mat-icon *ngSwitchCase='relationType.ally' style="color: #00FF00;">security</mat-icon>
