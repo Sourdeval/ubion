@@ -1,131 +1,118 @@
 <h1 align="center">Xorghluflux Saison 2</h1>
-<h3 class="subtitle">Sénat</h3>
-<mat-card>
-    <section>
-        <span class="inline senator" *ngFor='let s of data.senators; let i=index'>
-            <img style="align-self: center; width: 90%;" src="assets/{{s.name}}_140.png" alt="image de {{s.name}}">
-            <h4 align="center">{{s.fullname}}</h4>
-        </span>
-    </section>
-</mat-card>
-
-<h3 class="subtitle">Etat actuel du pays</h3>
-<mat-card style="display: block;">
-    <h4 class="inline" style="margin-left: 60px;">Population :<b style="margin-left: 30px;">{{data.population}}</b></h4>
-    <h4 class="inline" style="margin-left: 60px;">Ressources :<b style="margin-left: 30px;">{{data.ressources}} </b><b style="color:rgb(255, 200, 0);">PR</b></h4>
-    <h4 class="inline" style="margin-left: 60px;">Puissance Militaire :<b style="margin-left: 30px;">{{data.army}}</b></h4>
-    <h4 class="inline" style="margin-left: 60px;">Nourriture :
-        <span [ngSwitch]="data.food">
-            <b *ngSwitchCase="foodType.abondance" style="margin-left: 30px; color: rgb(0, 255, 0)">Abondance</b>
-            <b *ngSwitchCase="foodType.suffisante" style="margin-left: 30px; color: rgb(0, 255, 0)">Suffisante</b>
-            <b *ngSwitchCase="foodType.maigre" style="margin-left: 30px; color: rgb(255, 145, 0)">Maigre</b>
-            <b *ngSwitchCase="foodType.famine" style="margin-left: 30px; color: rgb(255, 0, 0)">Famine</b>
-        </span>
-    </h4>
-    <h4 class="inline" style="margin-left: 60px;">Popularité :
-        <span [ngSwitch]="data.popularity">
-            <b *ngSwitchCase="popularityType.maximum" style="margin-left: 30px; color: rgb(0, 255, 0)">Maximum</b>
-            <b *ngSwitchCase="popularityType.bonne" style="margin-left: 30px; color: rgb(0, 255, 0)">Bonne</b>
-            <b *ngSwitchCase="popularityType.moyenne" style="margin-left: 30px; color: rgb(0, 255, 0)">Moyenne</b>
-            <b *ngSwitchCase="popularityType.faible" style="margin-left: 30px; color: rgb(255, 145, 0)">Faible</b>
-            <b *ngSwitchCase="popularityType.contestation" style="margin-left: 30px; color: rgb(255, 0, 0)">Contestation</b>
-            <b *ngSwitchCase="popularityType.revolte" style="margin-left: 30px; color: rgb(255, 0, 0)">Révolte</b>
-        </span>
-    </h4>
-</mat-card>
-<br>
-<section>
-    <mat-card *ngFor="let city of data.cities" style="width: 45%; min-width: 400px;">
-        <mat-card-header>
-            <mat-card-title><h3>{{city.name}}</h3></mat-card-title>
-            <mat-card-subtitle>
-                <h4 align="center">Population : {{city.population}}</h4>
-                <h4 align="center" [ngSwitch]="city.richness">Richesse :
-                    <span *ngSwitchCase="richnessType.riche">Riche</span>
-                    <span *ngSwitchCase="richnessType.aise">Aisée</span>
-                    <span *ngSwitchCase="richnessType.moyen">Moyen</span>
-                    <span *ngSwitchCase="richnessType.faible">Faible</span>
-                    <span *ngSwitchCase="richnessType.pauvre">Pauvre</span>
-                </h4>
-                <h4 align="center">Défense : {{city.defence}}</h4>
-            </mat-card-subtitle>
-        </mat-card-header>
-            <h4>{{city.description}}</h4>
+<div *ngIf="data is Data">
+    <h3 class="subtitle">Sénat</h3>
+    <mat-card>
+        <section>
+            <span class="inline senator" *ngFor='let s of data.senators; let i=index'>
+                <img style="align-self: center; width: 90%;" src="assets/{{s.name}}_140.png" alt="image de {{s.name}}">
+                <h4 align="center">{{s.fullname}}</h4>
+            </span>
+        </section>
     </mat-card>
-</section>
-
-<div style="width: 100%;">
-    <h3>Religion</h3>
-</div>
-
-<section>
-    <table class="inline">
-        <tr>
-            <th colSpan="2"><h3 align="center">Statistiques</h3></th>
-        </tr>
-        <tr>
-            <td><h4>Taille</h4></td>
-            <td><h4 align="right">{{data.species.taille}}</h4></td>
-        </tr>
-        <tr>
-            <td><h4>Force</h4></td>
-            <td><h4 align="right">{{data.species.force}}</h4></td>
-        </tr>
-        <tr>
-            <td><h4>Agilité</h4></td>
-            <td><h4 align="right">{{data.species.agilite}}</h4></td>
-        </tr>
-        <tr>
-            <td><h4>Dextérité</h4></td>
-            <td><h4 align="right">{{data.species.dexterite}}</h4></td>
-        </tr>
-        <tr>
-            <td><h4>Intelligence</h4></td>
-            <td><h4 align="right">{{data.species.intelligence}}</h4></td>
-        </tr>
-        <tr>
-            <td><h4>Mécanique</h4></td>
-            <td><h4 align="right">{{data.species.mecanique}}</h4></td>
-        </tr>
-        <tr>
-            <td><h4>Psychisme</h4></td>
-            <td><h4 align="right">{{data.species.psychisme}}</h4></td>
-        </tr>
-        <tr>
-            <td><h4>Xénophilie</h4></td>
-            <td><h4 align="right">{{data.species.xenophilie}}</h4></td>
-        </tr>
-        <tr>
-            <td><h4>Charisme</h4></td>
-            <td><h4 align="right">{{data.species.charisme}}</h4></td>
-        </tr>
-    </table>
-    <div align="center" class="inline">
-        <h3 align="center">Carte</h3>
-        <img  [src]="srcmap" (mouseover)='srcmap="assets/map_annote.png"' (mouseout)='srcmap="assets/map.png"' alt="Carte du monde">
+    
+    <h3 class="subtitle">Etat actuel du pays</h3>
+    <mat-card style="display: block;">
+        <h4 class="inline" style="margin-left: 60px;">Population :<b style="margin-left: 30px;">{{data.population}}</b></h4>
+        <h4 class="inline" style="margin-left: 60px;">Ressources :<b style="margin-left: 30px;">{{data.ressources}} </b><b style="color:rgb(255, 200, 0);">PR</b></h4>
+        <h4 class="inline" style="margin-left: 60px;">Puissance Militaire :<b style="margin-left: 30px;">{{data.army}}</b></h4>
+        <h4 class="inline" style="margin-left: 60px;">Nourriture :
+            <span [ngSwitch]="data.food">
+                <b *ngSwitchCase="foodType.abondance" style="margin-left: 30px; color: rgb(0, 255, 0)">Abondance</b>
+                <b *ngSwitchCase="foodType.suffisante" style="margin-left: 30px; color: rgb(0, 255, 0)">Suffisante</b>
+                <b *ngSwitchCase="foodType.maigre" style="margin-left: 30px; color: rgb(255, 145, 0)">Maigre</b>
+                <b *ngSwitchCase="foodType.famine" style="margin-left: 30px; color: rgb(255, 0, 0)">Famine</b>
+            </span>
+        </h4>
+        <h4 class="inline" style="margin-left: 60px;">Popularité :
+            <span [ngSwitch]="data.popularity">
+                <b *ngSwitchCase="popularityType.maximum" style="margin-left: 30px; color: rgb(0, 255, 0)">Maximum</b>
+                <b *ngSwitchCase="popularityType.bonne" style="margin-left: 30px; color: rgb(0, 255, 0)">Bonne</b>
+                <b *ngSwitchCase="popularityType.moyenne" style="margin-left: 30px; color: rgb(0, 255, 0)">Moyenne</b>
+                <b *ngSwitchCase="popularityType.faible" style="margin-left: 30px; color: rgb(255, 145, 0)">Faible</b>
+                <b *ngSwitchCase="popularityType.contestation" style="margin-left: 30px; color: rgb(255, 0, 0)">Contestation</b>
+                <b *ngSwitchCase="popularityType.revolte" style="margin-left: 30px; color: rgb(255, 0, 0)">Révolte</b>
+            </span>
+        </h4>
+    </mat-card>
+    <br>
+    <section>
+        <mat-card *ngFor="let city of data.cities" style="width: 45%; min-width: 400px;">
+            <mat-card-header>
+                <mat-card-title><h3>{{city.name}}</h3></mat-card-title>
+                <mat-card-subtitle>
+                    <h4 align="center">Population : {{city.population}}</h4>
+                    <h4 align="center" [ngSwitch]="city.richness">Richesse :
+                        <span *ngSwitchCase="richnessType.riche">Riche</span>
+                        <span *ngSwitchCase="richnessType.aise">Aisée</span>
+                        <span *ngSwitchCase="richnessType.moyen">Moyen</span>
+                        <span *ngSwitchCase="richnessType.faible">Faible</span>
+                        <span *ngSwitchCase="richnessType.pauvre">Pauvre</span>
+                    </h4>
+                    <h4 align="center">Défense : {{city.defence}}</h4>
+                </mat-card-subtitle>
+            </mat-card-header>
+                <h4>{{city.description}}</h4>
+        </mat-card>
+    </section>
+    
+    <div style="width: 100%;">
+        <h3>Religion</h3>
     </div>
-    <div class="inline" style="margin-left: 3%; margin-right: 3%;">
-        <div>
-            <th colSpan="2"><h3 align="center">Autres Nations</h3></th>
+    
+    <section>
+        <table class="inline">
+            <tr>
+                <th colSpan="2"><h3 align="center">Statistiques</h3></th>
+            </tr>
+            <tr>
+                <td><h4>Taille</h4></td>
+                <td><h4 align="right">{{data.species.taille}}</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Force</h4></td>
+                <td><h4 align="right">{{data.species.force}}</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Agilité</h4></td>
+                <td><h4 align="right">{{data.species.agilite}}</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Dextérité</h4></td>
+                <td><h4 align="right">{{data.species.dexterite}}</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Intelligence</h4></td>
+                <td><h4 align="right">{{data.species.intelligence}}</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Mécanique</h4></td>
+                <td><h4 align="right">{{data.species.mecanique}}</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Psychisme</h4></td>
+                <td><h4 align="right">{{data.species.psychisme}}</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Xénophilie</h4></td>
+                <td><h4 align="right">{{data.species.xenophilie}}</h4></td>
+            </tr>
+            <tr>
+                <td><h4>Charisme</h4></td>
+                <td><h4 align="right">{{data.species.charisme}}</h4></td>
+            </tr>
+        </table>
+        <div align="center" class="inline">
+            <h3 align="center">Carte</h3>
+            <img  [src]="srcmap" (mouseover)='srcmap="assets/map_annote.png"' (mouseout)='srcmap="assets/map.png"' alt="Carte du monde">
         </div>
-        <div style="border-bottom: 1px black solid;" *ngFor="let n of data.pnj">
-            <td class="name-column"><h4>{{n.name}}</h4></td>
-            <td class="icon-column">
-                <div [ngSwitch]="n.relation">
-                    <mat-icon *ngSwitchCase="relationType.neutral" style="color: #ddff00;">sentiment_dissatisfied</mat-icon>
-                    <mat-icon *ngSwitchCase="relationType.bad" style="color: #ff0000;">sentiment_dissatisfied</mat-icon>
-                    <mat-icon *ngSwitchCase='relationType.good' style="color: #00FF00;">tag_faces</mat-icon>
-                    <mat-icon *ngSwitchCase='relationType.war' style="color: #ff0000;">offline_bolt</mat-icon>
-                    <mat-icon *ngSwitchCase='relationType.ally' style="color: #00FF00;">security</mat-icon>
-                    <mat-icon *ngSwitchCase='relationType.coldwar' style="color: #00ffff;">ac_unit</mat-icon>
-                    <mat-icon *ngSwitchCase='relationType.trade' style="color: #ddff00;">monetization_on</mat-icon>
-                    <mat-icon *ngSwitchCase='relationType.love' style="color: #ff0000;">favorite</mat-icon>
-                </div>
-            </td>
-            <tr *ngFor="let pnj of n.characters">
-                <h4 style="color: black; text-shadow: none; margin-left:20px;">- {{pnj.name}}</h4>
+        <div class="inline" style="margin-left: 3%; margin-right: 3%;">
+            <div>
+                <th colSpan="2"><h3 align="center">Autres Nations</h3></th>
+            </div>
+            <div style="border-bottom: 1px black solid;" *ngFor="let n of data.pnj">
+                <td class="name-column"><h4>{{n.name}}</h4></td>
                 <td class="icon-column">
-                    <div [ngSwitch]="pnj.relation">
+                    <div [ngSwitch]="n.relation">
                         <mat-icon *ngSwitchCase="relationType.neutral" style="color: #ddff00;">sentiment_dissatisfied</mat-icon>
                         <mat-icon *ngSwitchCase="relationType.bad" style="color: #ff0000;">sentiment_dissatisfied</mat-icon>
                         <mat-icon *ngSwitchCase='relationType.good' style="color: #00FF00;">tag_faces</mat-icon>
@@ -136,11 +123,26 @@
                         <mat-icon *ngSwitchCase='relationType.love' style="color: #ff0000;">favorite</mat-icon>
                     </div>
                 </td>
-            </tr>
+                <tr *ngFor="let pnj of n.characters">
+                    <h4 style="color: black; text-shadow: none; margin-left:20px;">- {{pnj.name}}</h4>
+                    <td class="icon-column">
+                        <div [ngSwitch]="pnj.relation">
+                            <mat-icon *ngSwitchCase="relationType.neutral" style="color: #ddff00;">sentiment_dissatisfied</mat-icon>
+                            <mat-icon *ngSwitchCase="relationType.bad" style="color: #ff0000;">sentiment_dissatisfied</mat-icon>
+                            <mat-icon *ngSwitchCase='relationType.good' style="color: #00FF00;">tag_faces</mat-icon>
+                            <mat-icon *ngSwitchCase='relationType.war' style="color: #ff0000;">offline_bolt</mat-icon>
+                            <mat-icon *ngSwitchCase='relationType.ally' style="color: #00FF00;">security</mat-icon>
+                            <mat-icon *ngSwitchCase='relationType.coldwar' style="color: #00ffff;">ac_unit</mat-icon>
+                            <mat-icon *ngSwitchCase='relationType.trade' style="color: #ddff00;">monetization_on</mat-icon>
+                            <mat-icon *ngSwitchCase='relationType.love' style="color: #ff0000;">favorite</mat-icon>
+                        </div>
+                    </td>
+                </tr>
+            </div>
         </div>
-    </div>
-    <div align="center" class="inline" style="width: 20%; min-width: 200px;" *ngIf="data.lastReport">
-        <h3>Dernier rapport annuel</h3>
-        <h5>{{data.lastReport}}</h5>
-    </div>
-</section>
+        <div align="center" class="inline" style="width: 20%; min-width: 200px;" *ngIf="data.lastReport">
+            <h3>Dernier rapport annuel</h3>
+            <h5>{{data.lastReport}}</h5>
+        </div>
+    </section>    
+</div>

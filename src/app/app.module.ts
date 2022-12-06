@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon'; 
+import { HttpClientModule } from '@angular/common/http';
 
 const ROUTES: Routes = [
   { path: '', component: HomeComponent },
@@ -24,7 +25,8 @@ const ROUTES: Routes = [
     RouterModule.forRoot(ROUTES),
     BrowserAnimationsModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -36,7 +36,8 @@ export interface Pnj{
 }
 
 export enum Relation{
-    bad, good, ally, war, trade, coldwar, love, neutral
+    bad = "bad", good = "good", ally = "ally", war = "war", trade = "trade",
+    coldwar = "coldwar", love = "love", neutral = "neutral"
 }
 
 export interface Character{
@@ -45,10 +46,11 @@ export interface Character{
 }
 
 export enum Food {
-    abondance, suffisante, maigre, famine,
+    abondance = "abondance", suffisante = "suffisante", maigre = "maigre", famine = "famine"
 }
 export enum Popularity {
-    maximum, bonne, moyenne, faible, contestation, revolte
+    maximum = "maximum", bonne = "bonne", moyenne = "moyenne", faible = "faible",
+    contestation = "contestation", revolte = "revolte"
 }
 
 export interface City{
@@ -60,5 +62,5 @@ export interface City{
 }
 
 export enum Richness {
-    riche, aise, moyen, faible, pauvre
+    riche = "riche", aise = "aise", moyen = "moyen", faible = "faible", pauvre = "pauvre"
 }
