@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, isDevMode } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { Data } from './core';
@@ -18,7 +18,11 @@ export class UbionDataService {
     let opt = {
       headers : head
     }
-    this.data = http.get<Data>("https://sourdeval.github.io/ubion-data/data1.json", opt);
+    if (isDevMode()) {
+      this.data = http.get<Data>("https://sourdeval.github.io/ubion-data/data1.json");
+    } else {
+      this.data = http.get<Data>("https://sourdeval.github.io/ubion-data/data1.json", opt);
+    }
    }
 
    getData(): Observable<Data> {

@@ -3,7 +3,7 @@ export interface Data{
     species:SpeciesStat;
     pnj:Pnj[];
     lastReport: string;
-    population: number;
+    population: string;
     ressources: number;
     army: number;
     food: Food;
@@ -55,7 +55,7 @@ export enum Popularity {
 
 export interface City{
     name: string;
-    population: number;
+    population: string;
     richness: Richness;
     defence: number;
     description: string;
