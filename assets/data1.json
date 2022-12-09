@@ -1,0 +1,74 @@
+{
+    "senators":[
+        {
+            "name": "flo",
+            "fullname": "Général Xorcruz",
+            "description": ""
+        }
+    ],
+    "species": {
+        "taille": 4,
+        "force": 2,
+        "agilite": 2,
+        "dexterite": 3,
+        "intelligence": 4,
+        "mecanique": 4,
+        "psychisme": 3,
+        "xenophilie": 3,
+        "charisme": 1
+    },
+    "pnj": [
+        {
+            "name": "Les Sariniens",
+            "characters": [
+                {
+                    "name": "Miro",
+                    "relation": "good"
+                }
+            ],
+            "relation": "neutral"
+        },
+        {
+            "name": "Nomades",
+            "characters":[],
+            "relation":"bad"
+        }
+    ],
+    "lastReport": "",
+    "population": 8,
+    "ressources": 4,
+    "army": 1,
+    "food": "abondance",
+    "popularity": "moyenne",
+    "cities": [
+        {
+            "name": "Capitale",
+            "population": 5,
+            "richness": "moyen",
+            "defence": 1,
+            "ctiteRooms": 4,
+            "description": "Fondée en 1 après la sortie de la caverne, la capitale de votre pays se trouve au milieu d'une forêt."
+        },
+        {
+            "name": "Citée de l'Oasis",
+            "population": 3,
+            "richness": "pauvre",
+            "defence": 0,
+            "ctiteRooms": 2,
+            "description": "Seconde citée de votre pays. Elle a été construite difficilement entre 3 endroits, le désert, un oasis et quelques terres cultivables. Les Sariniens vous louent des terres au plus proche de cette citée."
+        }
+    ],
+    "cults": [
+        {
+            "name": "Les Adorateurs de Léviathan",
+            "percent": "80%",
+            "other": "Puissance : 3 sénateurs (Nv 5)"
+        }
+    ],
+    "science": 2,
+    "education": 3,
+    "culture": 3,
+    "spy": 4,
+    "specialForces": 7,
+    "explorer": 2
+}
