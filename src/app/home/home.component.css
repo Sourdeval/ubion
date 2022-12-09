@@ -2,8 +2,17 @@ mat-card{
     margin: 10px;
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
     padding: 6px;
     background: linear-gradient(#ff9d00 0%,#eeff00 100%);
+}
+
+.religious{
+    background: linear-gradient(#7c0065 0%,#ff00f7 100%);
+}
+
+.blue{
+    background: linear-gradient(#006e78 0%,#00eaff 100%);
 }
 
 .senator {

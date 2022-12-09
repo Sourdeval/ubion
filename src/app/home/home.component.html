@@ -12,10 +12,10 @@
     
     <h3 class="subtitle">Etat actuel du pays</h3>
     <mat-card style="display: block;">
-        <h4 class="inline" style="margin-left: 60px;">Population :<b style="margin-left: 30px;">{{data.population}}</b></h4>
-        <h4 class="inline" style="margin-left: 60px;">Ressources :<b style="margin-left: 30px;">{{data.ressources}} </b><b style="color:rgb(255, 200, 0);">PR</b></h4>
-        <h4 class="inline" style="margin-left: 60px;">Puissance Militaire :<b style="margin-left: 30px;">{{data.army}}</b></h4>
-        <h4 class="inline" style="margin-left: 60px;">Nourriture :
+        <h4 class="inline" style="margin-left: 5%;">Ressources :<b style="margin-left: 30px;">{{data.ressources}} </b><b style="color:rgb(255, 200, 0);">PR</b></h4>
+        <h4 class="inline" style="margin-left: 5%;">Population :<b style="margin-left: 30px;">{{data.population}}</b></h4>
+        <h4 class="inline" style="margin-left: 5%;">Puissance Militaire :<b style="margin-left: 30px;">{{data.army}}</b></h4>
+        <h4 class="inline" style="margin-left: 5%;">Nourriture :
             <span [ngSwitch]="data.food">
                 <b *ngSwitchCase="foodType.abondance" style="margin-left: 30px; color: rgb(0, 255, 0)">Abondance</b>
                 <b *ngSwitchCase="foodType.suffisante" style="margin-left: 30px; color: rgb(0, 255, 0)">Suffisante</b>
@@ -23,7 +23,7 @@
                 <b *ngSwitchCase="foodType.famine" style="margin-left: 30px; color: rgb(255, 0, 0)">Famine</b>
             </span>
         </h4>
-        <h4 class="inline" style="margin-left: 60px;">Popularité :
+        <h4 class="inline" style="margin-left: 5%;">Popularité :
             <span [ngSwitch]="data.popularity">
                 <b *ngSwitchCase="popularityType.maximum" style="margin-left: 30px; color: rgb(0, 255, 0)">Maximum</b>
                 <b *ngSwitchCase="popularityType.bonne" style="margin-left: 30px; color: rgb(0, 255, 0)">Bonne</b>
@@ -34,11 +34,10 @@
             </span>
         </h4>
     </mat-card>
-    <br>
     <section>
         <mat-card *ngFor="let city of data.cities" style="width: 45%; min-width: 400px;">
             <mat-card-header>
-                <mat-card-title><h3>{{city.name}}</h3></mat-card-title>
+                <mat-card-title><h3 align="center">{{city.name}}</h3></mat-card-title>
                 <mat-card-subtitle>
                     <h4 align="center">Population : {{city.population}}</h4>
                     <h4 align="center" [ngSwitch]="city.richness">Richesse :
@@ -49,15 +48,31 @@
                         <span *ngSwitchCase="richnessType.pauvre">Pauvre</span>
                     </h4>
                     <h4 align="center">Défense : {{city.defence}}</h4>
+                    <h4 align="center">Salles à Ctites : {{city.ctiteRooms}}</h4>
                 </mat-card-subtitle>
             </mat-card-header>
+            <mat-card-content style="width: 70%; margin-top: 12px;">
                 <h4>{{city.description}}</h4>
+            </mat-card-content>
         </mat-card>
     </section>
     
-    <div style="width: 100%;">
-        <h3>Religion</h3>
-    </div>
+    <mat-card *ngFor="let r of data.cults" class="religious" style="display: block;">
+        <h4 class="inline" style="margin-left: 5%;">Religion :</h4>
+        <h4 class="inline" style="margin-left: 5%;">{{r.name}}</h4>
+        <h4 class="inline" style="margin-left: 5%;">Croyants : {{r.percent}}</h4>
+        <h4 class="inline" style="margin-left: 5%;" *ngIf="r.boss">{{r.boss}}</h4>
+        <h4 class="inline" style="margin-left: 5%;">{{r.other}}</h4>
+    </mat-card>
+
+    <mat-card class="blue" style="display: block;">
+        <h4 class="inline" style="margin-left: 5%;">Trouveurs :<b style="margin-left: 10px;">Nv {{data.science}}</b></h4>
+        <h4 class="inline" style="margin-left: 5%;">Education :<b style="margin-left: 10px;">Nv {{data.education}}</b></h4>
+        <h4 class="inline" style="margin-left: 5%;">Culture :<b style="margin-left: 10px;">Nv {{data.culture}}</b></h4>
+        <h4 class="inline" style="margin-left: 5%;">Eclaireurs :<b style="margin-left: 10px;">Nv {{data.explorer}}</b></h4>
+        <h4 class="inline" style="margin-left: 5%;">Comédiens :<b style="margin-left: 10px;">Nv {{data.spy}}</b></h4>
+        <h4 class="inline" style="margin-left: 5%;">Fantômes :<b style="margin-left: 10px;">Nv {{data.specialForces}}</b></h4>
+    </mat-card>
     
     <section>
         <table class="inline">
@@ -124,7 +139,7 @@
                     </div>
                 </td>
                 <tr *ngFor="let pnj of n.characters">
-                    <h4 style="color: black; text-shadow: none; margin-left:20px;">- {{pnj.name}}</h4>
+                    <h5 class="black-text" style="margin-left:20px;">- {{pnj.name}}</h5>
                     <td class="icon-column">
                         <div [ngSwitch]="pnj.relation">
                             <mat-icon *ngSwitchCase="relationType.neutral" style="color: #ddff00;">sentiment_dissatisfied</mat-icon>

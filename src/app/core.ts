@@ -9,6 +9,13 @@ export interface Data{
     food: Food;
     popularity: Popularity;
     cities: City[];
+    cults: Cult[];
+    science: number;
+    education: number;
+    culture: number;
+    explorer: number;
+    spy: number;
+    specialForces: number;
 }
 
 export interface Senator{
@@ -59,8 +66,16 @@ export interface City{
     richness: Richness;
     defence: number;
     description: string;
+    ctiteRooms: number;
 }
 
 export enum Richness {
     riche = "riche", aise = "aise", moyen = "moyen", faible = "faible", pauvre = "pauvre"
+}
+
+export interface Cult{
+    name: string,
+    percent: string,
+    boss: string,
+    other: string
 }

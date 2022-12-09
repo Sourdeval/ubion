@@ -91,3 +91,8 @@ section {
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
+
+.black-text {
+    color: black;
+    text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+}
