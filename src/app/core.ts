@@ -16,6 +16,8 @@ export interface Data{
     explorer: number;
     spy: number;
     specialForces: number;
+    budget: string;
+    nextBudget: number;
 }
 
 export interface Senator{

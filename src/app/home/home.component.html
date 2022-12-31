@@ -58,7 +58,7 @@
     </section>
     
     <mat-card *ngFor="let r of data.cults" class="religious" style="display: block;">
-        <h4 class="inline" style="margin-left: 5%;">Religion :</h4>
+        <h4 class="inline" style="margin-left: 5%;"><u>Religion</u></h4>
         <h4 class="inline" style="margin-left: 5%;">{{r.name}}</h4>
         <h4 class="inline" style="margin-left: 5%;">Croyants : {{r.percent}}</h4>
         <h4 class="inline" style="margin-left: 5%;" *ngIf="r.boss">{{r.boss}}</h4>
@@ -66,9 +66,14 @@
     </mat-card>
 
     <mat-card class="blue" style="display: block;">
+        <h4 class="inline" style="margin-left: 5%;"><u>Indicateurs</u></h4>
         <h4 class="inline" style="margin-left: 5%;">Trouveurs :<b style="margin-left: 10px;">Nv {{data.science}}</b></h4>
         <h4 class="inline" style="margin-left: 5%;">Education :<b style="margin-left: 10px;">Nv {{data.education}}</b></h4>
         <h4 class="inline" style="margin-left: 5%;">Culture :<b style="margin-left: 10px;">Nv {{data.culture}}</b></h4>
+    </mat-card>
+
+    <mat-card class="red" style="display: block;">
+        <h4 class="inline" style="margin-left: 5%;"><u>Brigades</u></h4>
         <h4 class="inline" style="margin-left: 5%;">Eclaireurs :<b style="margin-left: 10px;">Nv {{data.explorer}}</b></h4>
         <h4 class="inline" style="margin-left: 5%;">Comédiens :<b style="margin-left: 10px;">Nv {{data.spy}}</b></h4>
         <h4 class="inline" style="margin-left: 5%;">Fantômes :<b style="margin-left: 10px;">Nv {{data.specialForces}}</b></h4>
@@ -158,6 +163,10 @@
         <div align="center" class="inline" style="width: 20%; min-width: 200px;" *ngIf="data.lastReport">
             <h3>Dernier rapport annuel</h3>
             <h5>{{data.lastReport}}</h5>
+        </div>
+        <div align="center" class="inline" style="width: 20%; min-width: 200px;" *ngIf="data.budget">
+            <h3>Dernier budget</h3>
+            <h5>{{data.budget}}</h5>
         </div>
     </section>    
 </div>

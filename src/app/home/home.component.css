@@ -15,6 +15,10 @@ mat-card{
     background: linear-gradient(#006e78 0%,#00eaff 100%);
 }
 
+.red {
+    background: linear-gradient(#780000 0%,#ff0000 100%);
+}
+
 .senator {
     width: 10%;
     min-width: 100px;
