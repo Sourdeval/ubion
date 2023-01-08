@@ -23,6 +23,7 @@ export interface Data{
 export interface Senator{
     name:string;
     fullname: string;
+    job: string;
     description: string;
 }
 
