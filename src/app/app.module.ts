@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon'; 
 import { HttpClientModule } from '@angular/common/http';
+import { MatTooltipModule } from '@angular/material/tooltip'; 
 
 const ROUTES: Routes = [
   { path: '', component: HomeComponent },
@@ -26,6 +27,7 @@ const ROUTES: Routes = [
     BrowserAnimationsModule,
     MatCardModule,
     MatIconModule,
+    MatTooltipModule,
     HttpClientModule
   ],
   providers: [],

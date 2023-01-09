@@ -5,7 +5,7 @@
         <section>
             <span class="inline senator" *ngFor='let s of data.senators; let i=index'>
                 <img style="align-self: center; width: 90%;" src="https://sourdeval.github.io/ubion-data/senators/{{s.name}}_140.png" alt="image de {{s.name}}">
-                <h4 align="center">{{s.fullname}}</h4>
+                <h4 matTooltip="{{s.job}}. {{s.description}}" align="center">{{s.fullname}}</h4>
             </span>
         </section>
     </mat-card>
