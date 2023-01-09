@@ -126,27 +126,15 @@
             <img  [src]="srcmap" (mouseover)='srcmap="assets/map_annote.png"' (mouseout)='srcmap="assets/map.png"' alt="Carte du monde">
         </div>
         <div class="inline" style="margin-left: 3%; margin-right: 3%;">
-            <div>
-                <th colSpan="2"><h3 align="center">Autres Nations</h3></th>
-            </div>
-            <div style="border-bottom: 1px black solid;" *ngFor="let n of data.pnj">
-                <td class="name-column"><h4>{{n.name}}</h4></td>
-                <td class="icon-column">
-                    <div [ngSwitch]="n.relation">
-                        <mat-icon *ngSwitchCase="relationType.neutral" style="color: #ddff00;">sentiment_dissatisfied</mat-icon>
-                        <mat-icon *ngSwitchCase="relationType.bad" style="color: #ff0000;">sentiment_dissatisfied</mat-icon>
-                        <mat-icon *ngSwitchCase='relationType.good' style="color: #00FF00;">tag_faces</mat-icon>
-                        <mat-icon *ngSwitchCase='relationType.war' style="color: #ff0000;">offline_bolt</mat-icon>
-                        <mat-icon *ngSwitchCase='relationType.ally' style="color: #00FF00;">security</mat-icon>
-                        <mat-icon *ngSwitchCase='relationType.coldwar' style="color: #00ffff;">ac_unit</mat-icon>
-                        <mat-icon *ngSwitchCase='relationType.trade' style="color: #ddff00;">monetization_on</mat-icon>
-                        <mat-icon *ngSwitchCase='relationType.love' style="color: #ff0000;">favorite</mat-icon>
-                    </div>
-                </td>
-                <tr *ngFor="let pnj of n.characters">
-                    <h5 class="black-text" style="margin-left:20px;">- {{pnj.name}}</h5>
+            <a href="https://sites.google.com/view/ubion/encyclop%C3%A9die/nations-etrangeres" target="_blank" rel="noopener noreferrer">
+                <div>
+                    <th colSpan="2"><h3 align="center">Autres Nations</h3></th>
+                </div>
+            
+                <div style="border-bottom: 1px black solid;" *ngFor="let n of data.pnj">
+                    <td class="name-column"><h4>{{n.name}}</h4></td>
                     <td class="icon-column">
-                        <div [ngSwitch]="pnj.relation">
+                        <div [ngSwitch]="n.relation">
                             <mat-icon *ngSwitchCase="relationType.neutral" style="color: #ddff00;">sentiment_dissatisfied</mat-icon>
                             <mat-icon *ngSwitchCase="relationType.bad" style="color: #ff0000;">sentiment_dissatisfied</mat-icon>
                             <mat-icon *ngSwitchCase='relationType.good' style="color: #00FF00;">tag_faces</mat-icon>
@@ -157,8 +145,23 @@
                             <mat-icon *ngSwitchCase='relationType.love' style="color: #ff0000;">favorite</mat-icon>
                         </div>
                     </td>
-                </tr>
-            </div>
+                    <tr *ngFor="let pnj of n.characters">
+                        <h5 class="black-text" style="margin-left:20px;">- {{pnj.name}}</h5>
+                        <td class="icon-column">
+                            <div [ngSwitch]="pnj.relation">
+                                <mat-icon *ngSwitchCase="relationType.neutral" style="color: #ddff00;">sentiment_dissatisfied</mat-icon>
+                                <mat-icon *ngSwitchCase="relationType.bad" style="color: #ff0000;">sentiment_dissatisfied</mat-icon>
+                                <mat-icon *ngSwitchCase='relationType.good' style="color: #00FF00;">tag_faces</mat-icon>
+                                <mat-icon *ngSwitchCase='relationType.war' style="color: #ff0000;">offline_bolt</mat-icon>
+                                <mat-icon *ngSwitchCase='relationType.ally' style="color: #00FF00;">security</mat-icon>
+                                <mat-icon *ngSwitchCase='relationType.coldwar' style="color: #00ffff;">ac_unit</mat-icon>
+                                <mat-icon *ngSwitchCase='relationType.trade' style="color: #ddff00;">monetization_on</mat-icon>
+                                <mat-icon *ngSwitchCase='relationType.love' style="color: #ff0000;">favorite</mat-icon>
+                            </div>
+                        </td>
+                    </tr>
+                </div>
+            </a>
         </div>
         <div align="center" class="inline" style="width: 20%; min-width: 200px;" *ngIf="data.lastReport">
             <h3>Dernier rapport annuel</h3>

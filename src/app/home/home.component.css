@@ -43,3 +43,7 @@ mat-card{
 mat-card-header{
     width: 50%;
 }
+
+a {
+    text-decoration: none;
+}
