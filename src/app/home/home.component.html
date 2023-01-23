@@ -1,6 +1,8 @@
 <h1 align="center">Xorghluflux Saison 2</h1>
 <div *ngIf="data">
-    <h3 class="subtitle">Sénat</h3>
+    <a href="https://sites.google.com/view/ubion/encyclop%C3%A9die/s%C3%A9nateurs" target="_blank" rel="noopener noreferrer">
+        <h3 class="subtitle">Sénat</h3>
+    </a>
     <mat-card>
         <section>
             <span class="inline senator" *ngFor='let s of data.senators; let i=index'>
@@ -57,13 +59,15 @@
         </mat-card>
     </section>
     
-    <mat-card *ngFor="let r of data.cults" class="religious" style="display: block;">
-        <h4 class="inline" style="margin-left: 5%;"><u>Religion</u></h4>
-        <h4 class="inline" style="margin-left: 5%;">{{r.name}}</h4>
-        <h4 class="inline" style="margin-left: 5%;">Croyants : {{r.percent}}</h4>
-        <h4 class="inline" style="margin-left: 5%;" *ngIf="r.boss">{{r.boss}}</h4>
-        <h4 class="inline" style="margin-left: 5%;">{{r.other}}</h4>
-    </mat-card>
+    <a href="https://sites.google.com/view/ubion/encyclop%C3%A9die/religions" target="_blank" rel="noopener noreferrer">
+        <mat-card *ngFor="let r of data.cults" class="religious" style="display: block;">
+            <h4 class="inline" style="margin-left: 5%;"><u>Religion</u></h4>
+            <h4 class="inline" style="margin-left: 5%;">{{r.name}}</h4>
+            <h4 class="inline" style="margin-left: 5%;">Croyants : {{r.percent}}</h4>
+            <h4 class="inline" style="margin-left: 5%;" *ngIf="r.boss">{{r.boss}}</h4>
+            <h4 class="inline" style="margin-left: 5%;">{{r.other}}</h4>
+        </mat-card>
+    </a>
 
     <mat-card class="blue" style="display: block;">
         <h4 class="inline" style="margin-left: 5%;"><u>Indicateurs</u></h4>
