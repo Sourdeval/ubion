@@ -1,0 +1,14 @@
+mat-card{
+    margin: 10px;
+    padding: 6px;
+    background: linear-gradient(#ff9d00 0%,#eeff00 100%);
+}
+
+mat-form-field{
+    margin-left: 5%;
+}
+
+button{
+    margin-left: 5%;
+    vertical-align: top;
+}

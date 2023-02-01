@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Data, Food, Popularity, Relation, Richness } from 'src/app/core';
 import { UbionDataService } from '../ubion-data.service';
 

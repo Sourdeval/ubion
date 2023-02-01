@@ -1,0 +1,27 @@
+<a href="/"><h1 align="center">Dashboard MJ</h1></a>
+<div *ngIf="data">
+    <mat-card>
+        <h2 align="center">Calcul Prochain Tour</h2>
+        <form [formGroup]="nextTurnForm">
+            <mat-form-field>
+                <mat-label>D10 Nourriture</mat-label>
+                <input matInput type="number" formControlName="foodDice">
+                <mat-error *ngIf="!this.nextTurnForm.controls['foodDice'].valid">Résultats uniquement de 0 à 9</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>D10 Santé</mat-label>
+                <input matInput type="number" formControlName="healthDice">
+                <mat-error *ngIf="!this.nextTurnForm.controls['healthDice'].valid">Résultats uniquement de 0 à 9</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Budget Militaire</mat-label>
+                <input matInput type="number" formControlName="militaryBudget">
+                <mat-error *ngIf="!this.nextTurnForm.controls['militaryBudget'].valid">Ceci n'est pas un budget.</mat-error>
+            </mat-form-field>
+
+            <button type="submit" [disabled]="!nextTurnForm.valid" mat-raised-button color="primary" >Calculer</button>
+        </form>
+    </mat-card>
+</div>

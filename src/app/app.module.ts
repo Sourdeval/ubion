@@ -8,17 +8,24 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon'; 
 import { HttpClientModule } from '@angular/common/http';
-import { MatTooltipModule } from '@angular/material/tooltip'; 
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { ComputeNextTurnComponent } from './compute-next-turn/compute-next-turn.component'; 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button'; 
+import { ReactiveFormsModule } from '@angular/forms';
 
 const ROUTES: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'duck', component: ComputeNextTurnComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ComputeNextTurnComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +35,10 @@ const ROUTES: Routes = [
     MatCardModule,
     MatIconModule,
     MatTooltipModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
     HttpClientModule
   ],
   providers: [],
