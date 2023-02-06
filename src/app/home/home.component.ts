@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   foodType = Food;
   popularityType = Popularity;
   richnessType = Richness;
-  srcmap = "assets/map.png";
+  srcmap = "https://sourdeval.github.io/ubion-data/map.png";
   constructor(private readonly dataService: UbionDataService) {}
 
   ngOnInit(): void {
