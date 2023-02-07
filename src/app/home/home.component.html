@@ -78,9 +78,7 @@
 
     <mat-card class="red" style="display: block;">
         <h4 class="inline" style="margin-left: 5%;"><u>Brigades</u></h4>
-        <h4 class="inline" style="margin-left: 5%;">Eclaireurs :<b style="margin-left: 10px;">Nv {{data.explorer}}</b></h4>
-        <h4 class="inline" style="margin-left: 5%;">Comédiens :<b style="margin-left: 10px;">Nv {{data.spy}}</b></h4>
-        <h4 class="inline" style="margin-left: 5%;">Fantômes :<b style="margin-left: 10px;">Nv {{data.specialForces}}</b></h4>
+        <h4 class="inline" *ngFor="let b of data.brigades" matTooltip="{{b.description}}" style="margin-left: 5%;">{{b.name}} :<b style="margin-left: 10px;">Nv {{b.level}}</b></h4>
     </mat-card>
     
     <section>

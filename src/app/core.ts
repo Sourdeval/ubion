@@ -13,9 +13,7 @@ export interface Data{
     science: number;
     education: number;
     culture: number;
-    explorer: number;
-    spy: number;
-    specialForces: number;
+    brigades: Brigade[];
     budget: string;
     nextBudget: number;
 }
@@ -81,4 +79,10 @@ export interface Cult{
     percent: string,
     boss: string,
     other: string
+}
+
+export interface Brigade{
+    name: string,
+    level: number,
+    description: string
 }
