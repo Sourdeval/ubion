@@ -87,3 +87,10 @@ export interface Brigade{
     level: number,
     description: string
 }
+
+
+export interface BudgetDomain{
+    name: string,
+    description: string,
+    color: string
+}

@@ -1,0 +1,26 @@
+mat-card{
+    margin: 10px;
+    padding: 6px;
+    background: linear-gradient(#6d4300 0%,#ffc400 100%);
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.religious{
+    background: linear-gradient(#7c0065 0%,#ff00f7 100%);
+}
+
+.blue{
+    background: linear-gradient(#006e78 0%,#00eaff 100%);
+}
+
+.red {
+    background: linear-gradient(#780000 0%,#ff0000 100%);
+}
+
+.green {
+    background: linear-gradient(#0f6d00 0%,#23cf00 100%);
+}
+
+.none{}

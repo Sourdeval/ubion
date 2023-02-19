@@ -14,10 +14,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button'; 
 import { ReactiveFormsModule } from '@angular/forms';
+import { BudgetComponent } from './budget/budget.component';
 
 const ROUTES: Routes = [
   { path: '', component: HomeComponent },
   { path: 'duck', component: ComputeNextTurnComponent },
+  { path: 'budget', component: BudgetComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
@@ -25,7 +27,8 @@ const ROUTES: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    ComputeNextTurnComponent
+    ComputeNextTurnComponent,
+    BudgetComponent
   ],
   imports: [
     BrowserModule,

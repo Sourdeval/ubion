@@ -1,0 +1,19 @@
+<a href="/"><h1 align="center">Budget</h1></a>
+<a href="/" style="position: fixed; bottom: 2%; right: 2%; width: auto;"><h2 align="center">Retour</h2></a>
+
+
+
+<div *ngIf="budget">
+    <div style="display: flex; flex-direction: row-reverse; padding-right: 5%;">
+        <h3>Ressources : {{totalPR}}</h3>
+    </div>
+    <mat-card *ngFor="let s of budget; let i=index" class="{{s.color}}">
+        <h3 style="width: 40%;">{{s.name}}</h3>
+        <h5 style="width: 40%; display: flex; align-items: center;">{{s.description}}</h5>
+        <button (click)="substract(i)" style="width: 50px; height: 50px;"><p style="font-size: 100%;">-</p></button>
+        <mat-card style="background: white; width: 50px; justify-content: center; align-items: center;">
+            {{getValue(i)}}
+        </mat-card>
+        <button (click)="add(i)" style="width: 50px; height: 50px;"><p style="font-size: 100%;">+</p></button>
+    </mat-card>
+</div>
