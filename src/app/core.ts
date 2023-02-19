@@ -3,7 +3,7 @@ export interface Data{
     species:SpeciesStat;
     pnj:Pnj[];
     lastReport: string;
-    population: string;
+    population: number;
     ressources: number;
     army: number;
     food: Food;
@@ -13,6 +13,7 @@ export interface Data{
     science: number;
     education: number;
     culture: number;
+    health: number;
     brigades: Brigade[];
     budget: string;
     nextBudget: number;

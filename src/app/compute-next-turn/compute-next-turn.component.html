@@ -16,12 +16,19 @@
             </mat-form-field>
 
             <mat-form-field>
+                <h5 style="color: black">Il y a {{numberCtites}} Salles à Ctites.</h5>
+                <mat-label>Naissances</mat-label>
+                <input matInput type="number" formControlName="birth">
+                <mat-error *ngIf="!this.nextTurnForm.controls['birth'].valid">Cela dépasse le nombre de salles.</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
                 <mat-label>Budget Militaire</mat-label>
                 <input matInput type="number" formControlName="militaryBudget">
                 <mat-error *ngIf="!this.nextTurnForm.controls['militaryBudget'].valid">Ceci n'est pas un budget.</mat-error>
             </mat-form-field>
 
-            <button type="submit" [disabled]="!nextTurnForm.valid" mat-raised-button color="primary" >Calculer</button>
+            <button type="submit" [disabled]="!nextTurnForm.valid" mat-raised-button color="primary" (click)="compute()">Calculer</button>
         </form>
     </mat-card>
 </div>
