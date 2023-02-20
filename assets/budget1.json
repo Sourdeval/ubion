@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Budget Militaire",
+        "description": "1PR pour garder une armée, 2PR pour en créer une.",
+        "color": "red"
+    },
+    {
+        "name": "Formation pour adulte",
+        "description": "1PR maximum. Améliore l'éducation et donc la découverte de technologies.",
+        "color": "blue"
+    },
+    {
+        "name": "Trouveurs",
+        "description": "1PR pour 10% de chance d'obtenir une technologie.",
+        "color": "blue"
+    },
+    {
+        "name": "Réparer la Capitale",
+        "description": "1PR ou 3PR",
+        "color": "none"
+    },
+    {
+        "name": "Construire un Monument",
+        "description": "Monument en la mémoire des morts de la Grande Flotte. 1PR ou 2PR ou 3PR",
+        "color": "none"
+    },
+    {
+        "name": "Construire une nouvelle Cité",
+        "description": "3PR",
+        "color": "none"
+    },
+    {
+        "name": "Préparer une guerre",
+        "description": "Attaquer la cité des Sariniens du Nord, car elle n'est pas encore bien implantée. 1PR",
+        "color": "red"
+    },
+    {
+        "name": "Distribution de plantes violettes",
+        "description": "1PR maximum.",
+        "color": "green"
+    },
+    {
+        "name": "Adorateurs de Léviathans",
+        "description": "1PR pour former de nouveaux éducateurs.",
+        "color": "religious"
+    },
+    {
+        "name": "Brigade : Eclaireurs",
+        "description": "1PR pour qu'il ne baisse pas d'un niveau, ou 3PR pour qu'il monte d'un niveau.",
+        "color": "red"
+    },
+    {
+        "name": "Brigade : Rondinteurs",
+        "description": "1PR pour qu'il ne baisse pas d'un niveau, ou 3PR pour qu'il monte d'un niveau.",
+        "color": "red"
+    },
+    {
+        "name": "Brigade : Comédiens",
+        "description": "1PR pour qu'il ne baisse pas d'un niveau, ou 3PR pour qu'il monte d'un niveau.",
+        "color": "red"
+    },
+    {
+        "name": "Brigade : Fantômes",
+        "description": "1PR pour qu'il ne baisse pas d'un niveau, ou 3PR pour qu'il monte d'un niveau.",
+        "color": "red"
+    },
+    {
+        "name": "Autres (préciser)",
+        "description": "",
+        "color": "none"
+    }
+]
