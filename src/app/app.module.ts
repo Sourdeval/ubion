@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button'; 
 import { ReactiveFormsModule } from '@angular/forms';
 import { BudgetComponent } from './budget/budget.component';
+import { ClipboardModule } from '@angular/cdk/clipboard'; 
 
 const ROUTES: Routes = [
   { path: '', component: HomeComponent },
@@ -42,6 +43,7 @@ const ROUTES: Routes = [
     ReactiveFormsModule,
     MatInputModule,
     MatButtonModule,
+    ClipboardModule,
     HttpClientModule
   ],
   providers: [],

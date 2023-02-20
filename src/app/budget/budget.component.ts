@@ -45,4 +45,13 @@ export class BudgetComponent {
     this.totalPR++;
   }
 
+  validate(): string{
+    if (!this.budget){ return ''; }
+    let ret = "**Budget**\n";
+    for(let i=0; i<this.budget?.length; i++){
+      ret += '\n'+this.budget[i].name + ' : '+this.values[i];
+    }
+    return ret;
+  }
+
 }

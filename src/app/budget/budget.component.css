@@ -23,4 +23,7 @@ mat-card{
     background: linear-gradient(#0f6d00 0%,#23cf00 100%);
 }
 
-.none{}
+.ok-button {
+    background: linear-gradient(#1ac300 0%,#8aff72 100%);
+    border: solid 3px black;
+}
