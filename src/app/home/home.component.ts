@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Data, Food, Popularity, Relation, Richness } from 'src/app/core';
+import { BudgetDomain, Data, Food, Popularity, Relation, Richness } from 'src/app/core';
 import { UbionDataService } from '../ubion-data.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { UbionDataService } from '../ubion-data.service';
 })
 export class HomeComponent implements OnInit {
   data : Data | undefined;
+  budget : BudgetDomain[] | undefined;
   relationType = Relation;
   foodType = Food;
   popularityType = Popularity;
@@ -22,5 +23,10 @@ export class HomeComponent implements OnInit {
         this.data = d;
       }
     );
+    this.dataService.getBudget().subscribe(
+      d => {
+        this.budget = d;
+      }
+    )
   }
 }
