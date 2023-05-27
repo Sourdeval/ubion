@@ -9,3 +9,6 @@ Déployer le site compilé grâce à angular-cli-ghpages :
 ```
 ng deploy --base-href=/ubion/
 ```
+```
+npm run publish-pages
+```
