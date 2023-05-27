@@ -64,35 +64,41 @@ export class ComputeNextTurnComponent implements OnInit {
         break;
     }
 
-    console.log("Variation Nourriture : "+popVariation);
+    console.log("Variation Nourriture : "+popVariation +" ("+this.data.food+")");
 
     //health
+    let healthState;
     let ps = this.data.health*5;
     if (ps >= (this.data.population*2)){
+      healthState = "bonne";
       if (formValues.healthDice == 1 || formValues.healthDice == 2){ popVariation+=2; }
       else if (formValues.healthDice > 2 && formValues.healthDice < 9){ popVariation+=1; }
     }
     else if (ps >= (this.data.population*1.3)){
+      healthState = "correcte";
       if (formValues.healthDice > 0 && formValues.healthDice < 6){ popVariation+=1; }
       else if (formValues.healthDice == 0){ popVariation-=1; }
     }
     else if (ps >= (this.data.population)){
+      healthState = "moyenne";
       if (formValues.healthDice == 1){ popVariation+=1; }
       else if (formValues.healthDice > 6 && formValues.healthDice < 10){ popVariation-=1; }
       else if (formValues.healthDice == 0){ popVariation-=1; }
     }
     else if (ps >= (this.data.population*0.5)){
+      healthState = "faible";
       if (formValues.healthDice > 1 && formValues.healthDice < 6){ popVariation-=1; }
       else if (formValues.healthDice > 5 && formValues.healthDice < 10){ popVariation-=2; }
       else if (formValues.healthDice == 0){ popVariation-=3; }
     }
     else {
+      healthState = "mauvaise";
       if (formValues.healthDice == 1){ popVariation-=1; }
       else if (formValues.healthDice > 1 && formValues.healthDice < 9){ popVariation-=2; }
       else if (formValues.healthDice == 9 || formValues.healthDice == 0){ popVariation-=3; }
     }
 
-    console.log("Variation Nourriture/Santé : "+popVariation);
+    console.log("Variation Nourriture/Santé : "+popVariation+" ("+healthState+")");
 
     //Birth
     if (formValues.birth > 0){
